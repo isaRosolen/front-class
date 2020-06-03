@@ -1,0 +1,14 @@
+{
+  "name": "front-class",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:IsabelaRosolen/front-class.git",
+  "author": "Isabela Rosolen <rosolen@work.co>",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.26.7"
+  },
+  "scripts": {
+    "start": "browser-sync start --server --files '*.html, *.css'"
+  }
+}
