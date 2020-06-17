@@ -11,11 +11,23 @@
     background: #f9f9f9;
 }
 
+@media screen and (max-width: 767px) {
+    .header {
+        padding: 10px 30px;
+    }
+}
+
 .list {
-    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .list {
+        display: flex;
+    }
 }
 
 .item {
@@ -50,13 +62,67 @@
     background: tomato;
     position: absolute;
     left: 0;
+    transform: scaleX(0);
+    transition: transform .5s ease-in-out;
+    transform-origin: 50% 50%;
 }
 
 .link:hover {
     color: tomato;
 }
 
+.link:hover:after {
+    color: tomato;
+    transform: scaleX(0.7);
+}
+
 .logo {
     width: 100px;
     
 }
+
+@media screen and (max-width: 767px) {
+    .logo {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        position: fixed;
+        background: #f7f7f7;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .5s ease-in-out;
+        }
+    }
+
+@media screen and (min-width: 768px) {
+.menu-button {
+    display: none
+    }
+}
+
+.menu-open {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.close-btn {
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    top: 0px;
+    left: 278px;
+  }
+
+/* criar um bortao de fechar */
+/* estilizar o botao do menu */

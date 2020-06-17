@@ -1,9 +1,8 @@
-const h1 = document.body.querySelector("h1");
+const menuButton = document.querySelector("[data-menu-button]");
+const menu = document.querySelector("[data-menu]");
 
-h1.addEventListener("click", function() {
-    h1.style.color = "red";
+const onMenuButtonClick = () => {
+    menu.classList.add("menu-open");
+};
 
-});
-
-console.log(h1);
-
+menuButton.addEventListener('click', onMenuButtonClick);
