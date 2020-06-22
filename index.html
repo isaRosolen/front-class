@@ -8,25 +8,42 @@
 </head>
 <body>
     <header class="header" data-header="">
-        <img class="logo" src="assets/images/cat.png" alt="Imagem de um gato preto">
-        
-        <button class="menu-button" data-menu-button>Menu</button>
-        <nav class="menu" data-menu>
-            <ul class="list">
-                <li class="item">
-                    <a class="link" target="_blank" href="https://work.co/">
-                        Work & Co
-                    </a>
-                </li>
-                <li>
-                    <a class="link" href="#about">
-                        About
-                    </a>
-                </li>
-            </ul>
-        </nav>
+	   <img class="logo" src="assets/images/cat.png" alt="Imagem de um gato preto">
+	   
+	   <button class="menu-button" data-menu-open-button>
+		   <img src="assets/images/menu-icon.png"/>
+	   </button>
+	   <nav class="menu" data-menu>
+		   <button class="menu-close" data-menu-close-button>X</button>
+		  <ul class="list">
+			 <li class="item">
+				<a class="link" target="_blank" href="https://work.co/">
+				    Work & Co
+				</a>
+			 </li>
+			 <li>
+				<a class="link" href="#to-do">
+				    About
+				</a>
+			 </li>
+		  </ul>
+	   </nav>
     </header>
-    <section></section>
+    <section id="to-do">
+		<label for="add-item">
+			Add item
+		</label> 
+	<form>
+		<input id="add-item" placeholder="task" type="text" />
+		<button data-to-do-button>add</button>
+	</form>
+		<ul data-to-do-list>
+			<li>
+				Item 1
+				<button>remove</button>
+			</li>
+		</ul>
+	</section>
 </body>
 <script src="index.js"></script>
 </html>
