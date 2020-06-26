@@ -17,30 +17,31 @@
 		   <button class="menu-close" data-menu-close-button>X</button>
 		  <ul class="list">
 			 <li class="item">
+				<a class="link" href="#to-do">
+				    To Do List
+				</a>			 </li>
+			 <li>
 				<a class="link" target="_blank" href="https://work.co/">
 				    Work & Co
-				</a>
-			 </li>
-			 <li>
-				<a class="link" href="#to-do">
-				    About
 				</a>
 			 </li>
 		  </ul>
 	   </nav>
     </header>
-    <section id="to-do">
-		<label for="add-item">
-			Add item
+    <section class="section" id="to-do">
+		<label class="todo-list" for="add-item">
+			To Do List
 		</label> 
 	<form>
-		<input id="add-item" placeholder="task" type="text" />
-		<button data-to-do-button>add</button>
+		<input data-input class="input" type="text" id="add-item" placeholder="Task"/>
+		<button class="button-additem" data-to-do-button>
+			ADD
+		</button>
 	</form>
-		<ul data-to-do-list>
+		<ul class="item-list" data-to-do-list>
 			<li>
 				Item 1
-				<button>remove</button>
+				<button class="remove-button" type="button" data-remove-button >x</button>
 			</li>
 		</ul>
 	</section>

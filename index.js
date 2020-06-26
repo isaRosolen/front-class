@@ -7,32 +7,35 @@ const openCloseMenu = () => {
     menu.classList.toggle("menu-open")
 };
 
-// const closeMenu = () => {
-//     menu.classList.remove("menu-open")
-// };
-
 menuOpenButton.addEventListener("click", openCloseMenu);
-menuCloseButton.addEventListener("click", closeMenu);
+menuCloseButton.addEventListener("click", openCloseMenu);
 
 
-//ordem: a ordem nao faz diferença se eu estiver usando o dom / se eu especifico o PAI, ai ele precisa estar na ordem
-//agora pensar na interaçaos - que será o click no botão
-//nossa função - a gente que vai criar a propria funçao
+//Section - To-do list
 
-//nomear a minha funçao
+const addItemButton = document.querySelector("[data-to-do-button]");
+const list = document.querySelector("[data-to-do-list]");
+const input = document.querySelector("[data-input]");
+const removeButton = document.querySelector("[data-remove-button]")
 
-// --
+const createItem = (text, button) => {
+    const item = document.createElement("li");
+    item.innerHTML = text;
+    const removeItemButton = document.createElement("button")
+    removeItemButton.innerHTML = "button" ;
+    return item; 
+};
 
-// const menuButton = document.querySelector("[data-menu-button]"); -- o document é o dom (objeto), (Método) query selector é o que busca
-// const menu = document.querySelector("[data-menu]");
+const addItemTodo = e => {
+    e.preventDefault();
+    const item = createItem(input.value);
+    list.appendChild(item);
+    input.value="";
+}
 
-// const onMenuButtonClick = () => {
-//     menu.classList.add("menu-open");
-// };
+const removeItemTodo = () => {
+    console.log("Passed!!")
+}
 
-// const onMenuButtonClick = () => {
-//     menu.classList.add("menu-close");
-//     menu.classList.remove("menu-open");
-// }
-
-// menuButton.addEventListener('click', onMenuButtonClick);
+addItemButton.addEventListener("click", addItemTodo)
+removeButton.addEventListener('click', removeItemTodo)
