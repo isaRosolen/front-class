@@ -1,4 +1,3 @@
-
 const menuOpenButton = document.querySelector("[data-menu-open-button]");
 const menu = document.querySelector("[data-menu]");
 const menuCloseButton = menu.querySelector("[data-menu-close-button]");
@@ -18,12 +17,27 @@ const list = document.querySelector("[data-to-do-list]");
 const input = document.querySelector("[data-input]");
 const removeButton = document.querySelector("[data-remove-button]")
 
-const createItem = (text, button) => {
+// const createButton = () => {
+//     const removeItemButton = document.createElement("button");
+//     removeItemButton.innerHTML = "x";
+//     removeItemButton.classList.add("remove-button");
+//     return removeItemButton;
+// }
+
+const createItem = (text) => {
     const item = document.createElement("li");
     item.innerHTML = text;
-    const removeItemButton = document.createElement("button")
-    removeItemButton.innerHTML = "button" ;
-    return item; 
+    item.innerHTML = `<input type="checkbox"> ${text} <button class="remove-button">x</button>`;
+    return item
+// const createItem = (text) => {
+//     const item = document.createElement("li");
+//     item.innerHTML = text;
+//     const removeItemButton = createButton();
+//     // const removeItemButton = document.createElement("button")
+//     // removeItemButton.innerHTML = "x";
+//     // removeItemButton.classList.add("remove-button")
+//     item.appendChild(removeItemButton);
+//     return item; 
 };
 
 const addItemTodo = e => {
