@@ -27,7 +27,7 @@ const removeButton = document.querySelector("[data-remove-button]")
 const createItem = (text) => {
     const item = document.createElement("li");
     item.innerHTML = text;
-    item.innerHTML = `<input type="checkbox"> ${text} <button class="remove-button">x</button>`;
+    item.innerHTML = `<input class="checkbox" type="checkbox"> ${text} <button class="remove-button">x</button>`;
     return item
 // const createItem = (text) => {
 //     const item = document.createElement("li");

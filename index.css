@@ -184,12 +184,13 @@
 } */
 
 .todo-list {
-    position: relative;
     display: block;
+    align-items: center;
 }
 
 .item-list {
     font-size: 12px;
+    position: relative;
 }
 
 .remove-button {
@@ -212,4 +213,13 @@
     padding-left: 10px;
     padding-top: 9px;
     padding-bottom: 9px;
+}
+
+.checkbox {
+    padding: initial;
+    border: none;
+    background: white;
+    cursor: pointer;
+    font-size: 15px;
+    color: gray;
 }
