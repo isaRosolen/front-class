@@ -27,7 +27,7 @@ const removeButton = document.querySelector("[data-remove-button]")
 const createItem = (text) => {
     const item = document.createElement("li");
     item.innerHTML = text;
-    item.innerHTML = `<input class="checkbox" type="checkbox"> ${text} <button class="remove-button">x</button>`;
+    item.innerHTML = `<input class="checkbox" type="checkbox"> ${text} <button data-remove-button class="remove-button">x</button>`;
     return item
 // const createItem = (text) => {
 //     const item = document.createElement("li");
@@ -40,16 +40,24 @@ const createItem = (text) => {
 //     return item; 
 };
 
-const addItemTodo = e => {
-    e.preventDefault();
+const addItemTodo = event => {
+    event.preventDefault();
     const item = createItem(input.value);
     list.appendChild(item);
     input.value="";
-}
+};
 
-const removeItemTodo = () => {
-    console.log("Passed!!")
+const removeItemTodo = (event) => {
+    const item = event.target.parentNode;
+    
+    if(event.target.getAttribute("data-remove-button") !== null) {//se nao for null ele na vai entrar no if
+    list.removeChild(item);
+    }
+
+    if(event.target.type === "checkbox") {
+        item.classList.toggle("checked");
+    }
 }
 
 addItemButton.addEventListener("click", addItemTodo)
-removeButton.addEventListener('click', removeItemTodo)
+list.addEventListener('click', removeItemTodo)

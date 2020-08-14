@@ -217,9 +217,17 @@
 
 .checkbox {
     padding: initial;
-    border: none;
+    border-color: white;
     background: white;
     cursor: pointer;
     font-size: 15px;
     color: gray;
 }
+
+.checked {
+    text-decoration: line-through;
+    content: "";
+    left: 0;
+    transition: transform .5s ease-in-out;
+    transform-origin: 50% 50%;
+  }
