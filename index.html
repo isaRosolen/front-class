@@ -41,6 +41,71 @@
 		<ul class="item-list" data-to-do-list>
 		</ul>
 	</section>
+	<section class="section" id="form">
+		<h2>Formulário</h2>
+		<form>
+			<fieldset>
+				<legend>Dados Pessoais</legend>
+
+				<label for="Nome">Nome</label>
+				<input id="Nome" required placeholder="Nome" type="text">
+
+				<label for="Idade">Idade</label>
+				<input id="idade" placeholder="24" type="tel">
+				
+				<label for="email">E-mail</label>
+				<input id="email" placeholder="24" type="email">
+
+				<label for="email">E-mail</label>
+				<input id="email" placeholder="24" type="password">
+
+				<label for="senha">Senha</label>
+				<input id="senha" placeholder="password" type="password">
+
+				<div>
+					<span>Sexo</span>
+					<input name="sexo" id="feminino" type="radio">
+					<label for="feminino">Feminino</label>
+					<input name="sexo" id="masculino" type="radio">
+					<label for="masculino">Masculino</label>					
+				</div>
+
+				<div>
+					<span>Comidas Preferidas</span>
+					<input name="comida" id="comida" type="checkbox">
+					<label for="">Sushi</label>
+					<input name="comida" id="comida" type="checkbox">
+					<label for="masculino">Lasanha</label>
+				</div>
+				
+
+				<select name="Cidade" id="">
+					<option value="" >São Paulo</option>
+					<option>Rio de Janeiro</option>
+				</select>
+
+			</fieldset>
+
+			<fieldset>
+				<legend>Outras Informações</legend>
+				<div>
+					<span>Comidas Preferidas</span>
+					<input name="comida" id="comida" type="checkbox">
+					<label for="">Sushi</label>
+					<input name="comida" id="comida" type="checkbox">
+					<label for="masculino">Lasanha</label>
+				</div>
+				
+
+				<select name="Cidade" id="">
+					<option value="" >São Paulo</option>
+					<option>Rio de Janeiro</option>
+				</select>
+			</fieldset>
+			<button>Enviar</button>
+		</form>
+
+	</section>
 </body>
 <script src="index.js"></script>
 </html>
