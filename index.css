@@ -216,7 +216,7 @@
 
 .checkbox {
     padding: initial;
-    border-color: white;
+    border-color: #000000;
     background: white;
     cursor: pointer;
     font-size: 15px;
@@ -230,3 +230,19 @@
     transition: transform .5s ease-in-out;
     transform-origin: 50% 50%;
   }
+
+.submit-button {
+    position: relative;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    padding: 5px 5px;
+    transition-duration: 0.4s;
+    border: 2px solid
+} 
+
+.submit-button:hover {
+    background-color: gray;
+    color: black;
+    cursor: pointer;
+} 
